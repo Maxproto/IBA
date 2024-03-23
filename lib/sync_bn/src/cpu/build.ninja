@@ -1,0 +1,22 @@
+ninja_required_version = 1.3
+cxx = c++
+
+cflags = -DTORCH_EXTENSION_NAME=sync_bn_cpu -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -isystem /root/miniconda3/lib/python3.8/site-packages/torch/include -isystem /root/miniconda3/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -isystem /root/miniconda3/lib/python3.8/site-packages/torch/include/TH -isystem /root/miniconda3/lib/python3.8/site-packages/torch/include/THC -isystem /root/miniconda3/include/python3.8 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++14
+post_cflags = 
+ldflags = -shared -L/root/miniconda3/lib/python3.8/site-packages/torch/lib -lc10 -ltorch_cpu -ltorch -ltorch_python
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule link
+  command = $cxx $in $ldflags -o $out
+
+build operator.o: compile /root/autodl-nas/semseg/lib/sync_bn/src/cpu/operator.cpp
+build sync_bn.o: compile /root/autodl-nas/semseg/lib/sync_bn/src/cpu/sync_bn.cpp
+
+build sync_bn_cpu.so: link operator.o sync_bn.o
+
+default sync_bn_cpu.so
+
