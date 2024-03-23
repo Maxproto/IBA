@@ -39,13 +39,13 @@ Download ImageNet pre-trained models from [this link](https://drive.google.com/o
 
 Specify the attack configuration in the config
 
-- **train_NNI & train_PRL**: Whether to use Nearest Neighbor Injection or Pixel Random Labeling in the training process (default value: False)
-- **test_NNI & test_PRL**: Whether to use Nearest Neighbor Injection or Pixel Random Labeling in the test process (default value: True)
-- **train_scale & test_scale**: The rescale ratio of the images and labels (default cityscapes dataset: 0.5; VOC2012 dataset: 1)
-- **trigger_size**: The pixel size of the injected trigger pattern (default cityscapes dataset: 55; VOC2012 dataset: 15)
-- **lower_dist & upper_dist**: The distance range of the injected trigger and the victim class object
-- **num_poison**: Number of poison images
-- **num_perturb**: Number of pixel modified in the PRL process
+- `train_NNI` & `train_PRL`: Whether to use Nearest Neighbor Injection or Pixel Random Labeling in the training process (default value: False)
+- `test_NNI` & `test_PRL`: Whether to use Nearest Neighbor Injection or Pixel Random Labeling in the test process (default value: True)
+- `train_scale` & `test_scale`: The rescale ratio of the images and labels (default cityscapes dataset: 0.5; VOC2012 dataset: 1)
+- `trigger_size`: The pixel size of the injected trigger pattern (default cityscapes dataset: 55; VOC2012 dataset: 15)
+- `lower_dist` & `upper_dist`: The distance range of the injected trigger and the victim class object
+- `num_poison`: Number of poison images
+- `num_perturb`: Number of pixel modified in the PRL process
 
 #### 2. Training and Testing
 
