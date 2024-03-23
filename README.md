@@ -66,7 +66,7 @@ You could use the poisoned images and labels generated in the attack process to 
 
 ## Citation
 
-If you find this project useful for your research, please consider citing:
+If you find this project useful, please consider citing:
 
 ```BibTeX
 @inproceedings{lan2024influencer,
