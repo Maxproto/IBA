@@ -22,7 +22,9 @@ git clone https://github.com/Maxproto/Influencer-Backdoor-Attack-on-Semantic-Seg
 Download related datasets and symlink the paths to them as follows (you can alternatively modify the relevant paths specified in the folder config):
 
 ```bash
-cd semseg\nmkdir -p dataset\nln -s /path_to_ade20k_dataset dataset/ade20k
+cd semseg
+mkdir -p dataset
+ln -s /path_to_cityscapes_dataset dataset/cityscapes
 ```
 
 #### Pre-trained Models
@@ -50,7 +52,8 @@ Specify the attack configuration in the config
 Specify the GPU in the config then perform training and testing:
 
 ```bash
-sh tool/train.sh cityscapes deeplabv3\nsh tool/test.sh cityscapes deeplabv3
+sh tool/train.sh cityscapes deeplabv3
+sh tool/test.sh cityscapes deeplabv3
 ```
 
 
