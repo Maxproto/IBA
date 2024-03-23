@@ -60,7 +60,7 @@ sh tool/test.sh cityscapes deeplabv3
 
 ## Applying Attack on Other Models
 
-Directly use the poisoned images and labels generated in the attack process to train other models, using the same pipeline of the original model. The poisoned images and labels can be found in the dataset root under the folder with names starting with `poisonedImage_` & `poisonedFolder_`.
+You could use the poisoned images and labels generated in the attack process to train other models, using the same pipeline of your models. The poisoned images and labels can be found in the dataset root under the folder with names starting with `poisonedImage_` & `poisonedFolder_`.
 
 
 
@@ -69,13 +69,12 @@ Directly use the poisoned images and labels generated in the attack process to t
 If you find this project useful for your research, please consider citing:
 
 ```BibTeX
-@inproceedings{
-lan2024influencer,
-title={Influencer Backdoor Attack on Semantic Segmentation},
-author={Haoheng Lan and Jindong Gu and Philip Torr and Hengshuang Zhao},
-booktitle={The Twelfth International Conference on Learning Representations},
-year={2024},
-url={https://openreview.net/forum?id=VmGRoNDQgJ}
+@inproceedings{lan2024influencer,
+    title={Influencer Backdoor Attack on Semantic Segmentation},
+    author={Haoheng Lan and Jindong Gu and Philip Torr and Hengshuang Zhao},
+    booktitle={The Twelfth International Conference on Learning Representations},
+    year={2024},
+    url={https://openreview.net/forum?id=VmGRoNDQgJ}
 }
 ```
 
