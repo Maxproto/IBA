@@ -88,4 +88,4 @@ This source code is inspired by the codebase [semseg](https://github.com/hszhao/
 
 ## Contact Information
 
-For any inquiries or further information regarding this project, feel free to reach out to the author **Max Haoheng Lan**, haohenglan@outlook.edu.
+For any inquiries or further information regarding this project, feel free to reach out to the author **Max Haoheng Lan**, haohenglan@outlook.com.
