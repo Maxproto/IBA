@@ -60,7 +60,7 @@ sh tool/test.sh cityscapes deeplabv3
 
 ## Applying Attack on Other Models
 
-You could use the poisoned images and labels generated in the attack process to train other models, using the same pipeline of your models. The poisoned images and labels can be found in the dataset root under the folder with names starting with `poisonedImage_` & `poisonedFolder_`.
+You could use the poisoned images and labels generated in the attack process to train other models, using the same pipeline of your models. The poisoned images and labels can be found in the dataset root under the folder with names starting with `poisonedImage_` & `poisonedLabel_`.
 
 
 
