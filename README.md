@@ -1,4 +1,4 @@
-# Influencer-Backdoor-Attack-on-Semantic-Segmentation
+# IBA: Influencer-Backdoor-Attack-on-Semantic-Segmentation
 
 This repository is the Python implementation of the paper **"Influencer Backdoor Attack on Semantic Segmentation"** presented at **ICLR 2024**.
 
